@@ -11,7 +11,7 @@ const Container = styled(Box)`
     }
     & > div > input[type="text"] {
       border-bottom: 1px solid #111111;
-      opacity: 0.4;
+      opacity: 1;
       width: 300px;
       padding-right: 25px;
     }
@@ -61,7 +61,7 @@ const CreateNote: React.FC<ICreateNoteProps> = ({ addNotes }) => {
 
   const onCreateNote = () => {
       if(!note.title && !note.details) {
-        setError("All fields are mandatory");
+        setError("Title and details fields are mandatory");
         return;
       }
       addNotes({ ...note, id: uuid });
@@ -82,7 +82,7 @@ const CreateNote: React.FC<ICreateNoteProps> = ({ addNotes }) => {
       <Box component="span" >{note.title.length}/{TITLE_LIMIT}</Box>
 
       <InputBase 
-        placeholder="Title"
+        placeholder="Details"
         onChange={(e) => onValueChange(e)}
         name="details"
         value={note.details}
