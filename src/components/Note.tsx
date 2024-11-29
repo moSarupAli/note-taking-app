@@ -20,6 +20,11 @@ const Wrapper = styled(Box)`
     }
 `
 
+const NoteTitle = styled(Typography)`
+    font-size: 25px;
+    font-weight: 600;
+`
+
 const Note: React.FC<INoteProps> = ({ note, deleteNote }) => {
 
 
@@ -27,7 +32,7 @@ const Note: React.FC<INoteProps> = ({ note, deleteNote }) => {
       <StyledCard style={{ backgroundColor: note.color }} >
         <CardContent>
             <Wrapper>
-              <Typography>{note.title}</Typography>
+              <NoteTitle>{note.title}</NoteTitle>
               <Typography>{note.details}</Typography>
               <Typography>{note.date}</Typography>
               <Button variant="outlined" onClick={() => deleteNote(note.id)} >Delete</Button>
