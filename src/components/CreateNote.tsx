@@ -82,7 +82,7 @@ const CreateNote: React.FC<ICreateNoteProps> = ({ addNotes }) => {
       <Box component="span" >{note.title.length}/{TITLE_LIMIT}</Box>
 
       <InputBase 
-        placeholder="Details"
+        placeholder="Details/Content"
         onChange={(e) => onValueChange(e)}
         name="details"
         value={note.details}
