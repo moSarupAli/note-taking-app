@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+# Building a simple note taking app using ReactJS, TypeScript and Material UI
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
